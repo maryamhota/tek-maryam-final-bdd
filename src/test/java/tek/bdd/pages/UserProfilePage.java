@@ -1,9 +1,8 @@
 package tek.bdd.pages;
 
 import org.openqa.selenium.By;
-import tek.bdd.utility.SeleniumUtility;
 
-public class UserProfilePage extends SeleniumUtility {
+public class UserProfilePage extends tek.bdd.utilities.SeleniumUtility {
     public static final By ACCOUNT_PROFILE = By.xpath
             ("//button[@type='button']");
     public static final By PROFILE_INFORMATION = By.xpath

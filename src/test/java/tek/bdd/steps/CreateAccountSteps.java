@@ -5,7 +5,7 @@ import io.cucumber.java.en.When;
 import org.junit.Assert;
 import tek.bdd.pages.CreateAccountPage;
 import tek.bdd.utility.RandomGenerator;
-import tek.bdd.utility.SeleniumUtility;
+import tek.bdd.utilities.SeleniumUtility;
 
 public class CreateAccountSteps extends SeleniumUtility {
 
@@ -26,12 +26,12 @@ public class CreateAccountSteps extends SeleniumUtility {
         String randomEmail = RandomGenerator.randomEmail(prefix);
         sendText(CreateAccountPage.EMAIL_INPUT, randomEmail);
         selectFromDropDown(CreateAccountPage.PREFIX_SELECT, "Mr.");
-        sendText(CreateAccountPage.FIRST_NAME_INPUT, "Jawid");
-        sendText(CreateAccountPage.LAST_NAME_INPUT, "Gulzai");
-        selectFromDropDown(CreateAccountPage.GENDER_SELECT, "Male");
+        sendText(CreateAccountPage.FIRST_NAME_INPUT, "Maryam");
+        sendText(CreateAccountPage.LAST_NAME_INPUT, "Hotak");
+        selectFromDropDown(CreateAccountPage.GENDER_SELECT, "Female");
         selectFromDropDown(CreateAccountPage.MARITAL_STATUS_SELECT, "Married");
         sendText(CreateAccountPage.EMPLOYMENT_STATUS, "Test Engineer");
-        sendText(CreateAccountPage.DATE_OF_BIRTH, "07/07/2006");
+        sendText(CreateAccountPage.DATE_OF_BIRTH, "04/04/1983");
     }
 
     @Then("click on Create Account button")
@@ -59,9 +59,9 @@ public class CreateAccountSteps extends SeleniumUtility {
     }
     @When("when the user fill up sign up form")
     public void whenTheUserFillUpSignUpForm() {
-        sendText(CreateAccountPage.USERNAME_INPUT, "Jawid");
-        sendText(CreateAccountPage.PASSWORD_INPUT, "Jawid123$");
-        sendText(CreateAccountPage.CONFIRM_PASSWORD_INPUT, "Jawid123");
+        sendText(CreateAccountPage.USERNAME_INPUT, "Maryam");
+        sendText(CreateAccountPage.PASSWORD_INPUT, "Tek@1234");
+        sendText(CreateAccountPage.CONFIRM_PASSWORD_INPUT, "Tek@1234");
     }
     @Then("click on submit button")
     public void clickOnSubmitButton() {
@@ -71,14 +71,14 @@ public class CreateAccountSteps extends SeleniumUtility {
     @Then("fill up create account form page")
     public void fillUpCreateAccountFormPage() {
 
-        sendText(CreateAccountPage.EMAIL_INPUT, "Jawid422@gmail.com");
-        selectFromDropDown(CreateAccountPage.PREFIX_SELECT, "Mr.");
-        sendText(CreateAccountPage.FIRST_NAME_INPUT, "Jawid");
-        sendText(CreateAccountPage.LAST_NAME_INPUT, "Gulzai");
-        selectFromDropDown(CreateAccountPage.GENDER_SELECT, "Male");
+        sendText(CreateAccountPage.EMAIL_INPUT, "mhotak.us@gmail.com");
+        selectFromDropDown(CreateAccountPage.PREFIX_SELECT, "Ms.");
+        sendText(CreateAccountPage.FIRST_NAME_INPUT, "Maryam");
+        sendText(CreateAccountPage.LAST_NAME_INPUT, "Hotak");
+        selectFromDropDown(CreateAccountPage.GENDER_SELECT, "Female");
         selectFromDropDown(CreateAccountPage.MARITAL_STATUS_SELECT, "Married");
         sendText(CreateAccountPage.EMPLOYMENT_STATUS, "Test Engineer");
-        sendText(CreateAccountPage.DATE_OF_BIRTH, "07/07/2000");
+        sendText(CreateAccountPage.DATE_OF_BIRTH, "04/04/1983");
     }
     @When("validate account error message")
     public void validateAccountErrorMessage() {

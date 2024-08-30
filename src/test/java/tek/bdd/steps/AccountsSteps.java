@@ -5,7 +5,7 @@ import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 import tek.bdd.pages.AccountsPage;
-import tek.bdd.utility.SeleniumUtility;
+import tek.bdd.utilities.SeleniumUtility;
 
 import java.util.List;
 
@@ -18,7 +18,7 @@ public class AccountsSteps extends SeleniumUtility {
     }
 
     @Then("validate Primary Accounts title is exist")
-    public void validatePrimaryAccountsTitleExist() {
+    public void validatePrimaryAccountsTitleIsExist() {
         String actualPrimaryAccountsTitle = getElementText(AccountsPage.PRIMARY_ACCOUNT_TITLE);
         Assert.assertEquals("Primary Accounts", actualPrimaryAccountsTitle);
 
